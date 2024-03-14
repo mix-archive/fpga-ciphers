@@ -45,7 +45,7 @@ module ARS_des (
   // initial permutation, 64-bit input to 64-bit output
   function [64:1] IP;
     input [64:1] IPin;
-    //reg		[7:0]	s0_o,s1_o,s2_o,s3_o;
+    //reg  [7:0] s0_o,s1_o,s2_o,s3_o;
     begin
       IP = {
         IPin[58],

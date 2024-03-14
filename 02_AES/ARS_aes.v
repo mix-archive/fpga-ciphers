@@ -154,7 +154,11 @@ begin : control
     addroundkey_data_i = (0);
     next_addroundkey_start_i = (first_round_reg);
     mixcol_start_i = ((addroundkey_ready_o & enc & round != 10) | (subbytes_ready_o & !enc));
-    subbytes_start_i = ((addroundkey_ready_o&!enc)|(mixcol_ready_o&enc)|(addroundkey_ready_o&enc&round==10));
+    subbytes_start_i = (
+      (addroundkey_ready_o & !enc) |
+      (mixcol_ready_o & enc) |
+      (addroundkey_ready_o & enc & round == 10)
+    );
 
     if (enc && round != 10) begin
 
@@ -194,7 +198,7 @@ begin : control
 
       1: begin
 
-        //Counter	
+        //Counter
         if (!enc && mixcol_ready_o) begin
 
           next_addroundkey_start_i = (1);
