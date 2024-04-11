@@ -1,3 +1,7 @@
+/**
+* Substitution box for the AES algorithm.
+* Given from teaching material
+*/
 module ARS_sbox (
     clk,
     reset,

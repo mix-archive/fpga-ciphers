@@ -1,3 +1,7 @@
+/**
+* AES mix column module
+* Given from teaching material
+*/
 module ARS_mixcolum (
     clk,
     reset,

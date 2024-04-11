@@ -1,3 +1,7 @@
+/**
+* AES key schedule module
+* Given from teaching material
+*/
 module ARS_keysched (
     clk,
     reset,

@@ -1,3 +1,7 @@
+/**
+* AES row shift module
+* Given from teaching material
+*/
 module ARS_subbytes (
     clk,
     reset,

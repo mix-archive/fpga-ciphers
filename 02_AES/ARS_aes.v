@@ -1,12 +1,16 @@
+/**
+* AES IP core
+* Given from teaching material
+*/
 module ARS_aes (
-    clk,
-    reset,
-    load,
-    enc,
-    din,
-    key,
-    ready,
-    dout
+    clk,  // Clock signal
+    reset,  // Reset signal
+    load,  // Load signal, when high, the module will load the key
+    enc,  // ~enc signal, low indicates encryption, high indicates decryption
+    din,  // Data input, 128-bit
+    key,  // Key input, 128-bit
+    ready,  // Ready signal, high when the output is valid
+    dout  // Data output, 128-bit
 );
 
 
